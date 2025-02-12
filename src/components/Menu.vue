@@ -1,12 +1,12 @@
 <template>
   <div class="menu">
-    <div class="logo" :style="{ backgroundImage: `url(${logoPath})` }" />
+    <div class="logo" :style="{ backgroundImage: `url(${logoPath})` }" @click="goToPath('/')" />
     <div class="items">
       <div v-for="item in items" :key="item.text" class="item" @mouseover="submenuIsVisible = item">
-        <div class="item-text">{{ item.text }}</div>
+        <div class="item-text" @click="goToPath(item.path)">{{ item.text }}</div>
         <div v-if="item.submenu && submenuIsVisible === item" class="submenu" @click.stop>
           <div v-for="subitem in item.submenu" :key="subitem.text" class="item">
-            <div class='item-text'>{{ subitem.text }}</div>
+            <div class='item-text' @click="goToPath(subitem.path)">{{ subitem.text }}</div>
           </div>
         </div>
       </div>
@@ -41,6 +41,11 @@ export default {
   methods: {  
     hideSubmenu() {
       this.submenuIsVisible = null;
+    },
+    goToPath(path) {
+      if (path) {
+        window.location.href = path;
+      }
     }
   }
 };
