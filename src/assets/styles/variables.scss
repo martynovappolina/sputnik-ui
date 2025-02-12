@@ -5,3 +5,39 @@ $secondary2: #1E3A8A;
 $dark: #000000;
 $light: #FFFFFF;
 $disabled: #9CA3AF;
+
+@font-face {
+    font-family: 'RostelecomBasis';
+    src: url('~@/assets/fonts/rostelecombasis_light.otf') format('otf');
+    font-style: normal;
+    font-weight: normal;
+} 
+
+@mixin font {
+    font-family: 'RostelecomBasis';
+}
+
+@mixin big-text {
+    @include font;
+    font-size: 26px; 
+}
+
+@mixin h1 {  
+    @include font;
+    font-size: 52px;
+} 
+
+@mixin h2 {  
+    @include font;
+    font-size: 32px;
+} 
+
+@mixin text {  
+    @include font;
+    font-size: 22px;
+} 
+
+@mixin small-text {  
+    @include font;
+    font-size: 16px;
+}
