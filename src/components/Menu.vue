@@ -1,54 +1,68 @@
 <template>
   <div class="menu">
     <div class="logo" :style="{ backgroundImage: `url(${logoPath})` }" @click="goToPath('/')" />
-    <div class="items">
-      <div v-for="item in items" :key="item.text" class="item" @mouseover="submenuIsVisible = item">
-        <div class="item-text" @click="goToPath(item.path)">{{ item.text }}</div>
-        <div v-if="item.submenu && submenuIsVisible === item" class="submenu" @click.stop>
-          <div v-for="subitem in item.submenu" :key="subitem.text" class="item">
-            <div class='item-text' @click="goToPath(subitem.path)">{{ subitem.text }}</div>
+    <div v-if="windowWidth > 800 || menuIsOpen" class="items">
+      <div v-for="item in items" :key="item.text" class="item" @click.stop @click="() => {goToPath(item.path); showSubmenu(item)}">
+        <div class="item-text">{{ item.text }}</div>
+        <div v-if="item.submenu && item === activeSubmenu" class="submenu" @click.stop>
+          <div v-for="subitem in item.submenu" :key="subitem.text" @click="goToPath(subitem.path)" class="item">
+            <div class='item-text'>{{ subitem.text }}</div>
           </div>
         </div>
       </div>
     </div>
+    <div v-if="windowWidth <= 800" class="burger" @click="toggleMenu" :class="{ open: menuIsOpen }"></div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'MainMenu',  
-  props: {  
-    items: {  
-      type: Array,  
-      required: true  
+  export default {
+    name: 'MainMenu',  
+    props: {  
+      items: {  
+        type: Array,  
+        required: true  
+      },
+      logoPath: {
+        type: String,
+        default: require('@/assets/icons/logo.svg')
+      }
     },
-    logoPath: {
-      type: String,
-      default: require('@/assets/icons/logo.svg')
-    }
-  },
-  mounted() {
-    document.addEventListener('click', this.hideSubmenu);
-  },
-  unmounted() {
-    document.removeEventListener('click', this.hideSubmenu);
-  },
-  data() {
-    return {
-      submenuIsVisible: null
-    }
-  },
-  methods: {  
-    hideSubmenu() {
-      this.submenuIsVisible = null;
+    data() {
+      return {
+        activeSubmenu: null,
+        menuIsOpen: false,
+        windowWidth: window.innerWidth
+      };
     },
-    goToPath(path) {
-      if (path) {
-        window.location.href = path;
+    mounted() {
+      document.addEventListener('click', this.hideSubmenu);
+      window.addEventListener('resize', this.updateWindowWidth);
+    },
+    unmounted() {
+      document.removeEventListener('click', this.hideSubmenu);
+      window.removeEventListener('resize', this.updateWindowWidth);
+    },
+    methods: {
+      hideSubmenu() {
+        this.activeSubmenu = null;
+      },
+      showSubmenu(item) {
+        this.activeSubmenu = item;
+      },
+      goToPath(path) {
+        if (path) {
+          window.location.href = path;
+        }
+      },
+      toggleMenu() {
+        this.menuIsOpen = !this.menuIsOpen;
+      },
+      updateWindowWidth() {
+        this.windowWidth = window.innerWidth;
       }
     }
-  }
-};
+  };
 </script>
 
 <style lang='scss'>  
@@ -70,6 +84,20 @@ export default {
       background-repeat: no-repeat;
       background-position: center;
       cursor: pointer;
+    }
+
+    .burger {
+      width: 30px;
+      height: 30px;
+      background-image: url('~@/assets/icons/menu.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      transition: background-image 0.2s ease;
+
+      &.open {
+        background-image: url('~@/assets/icons/close.svg');
+      }
     }
 
     .items {
@@ -99,6 +127,23 @@ export default {
 
         .item {
           margin: 25px 0;
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      .items {
+        flex-direction: column;
+        padding-top: 50px;
+        transition: all 0.3s ease;
+
+        .item {
+          margin: 20px 0;
+        }
+
+        .submenu {
+          position: static;
+          padding: 0;
         }
       }
     }
