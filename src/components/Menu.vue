@@ -1,7 +1,8 @@
 <template>
   <div class="menu">
     <div class="logo" :style="{ backgroundImage: `url(${logoPath})` }" @click="goToPath('/')" />
-    <div v-if="windowWidth > 800 || menuIsOpen" class="items">
+    
+    <div v-if="windowWidth > 800" class="items">
       <div v-for="item in items" :key="item.text" class="item" @click.stop @click="() => {goToPath(item.path); showSubmenu(item)}">
         <div class="item-text">{{ item.text }}</div>
         <div v-if="item.submenu && item === activeSubmenu" class="submenu" @click.stop>
@@ -11,6 +12,23 @@
         </div>
       </div>
     </div>
+
+    <div v-if="windowWidth <= 800 && menuIsOpen">
+      <div v-if="!activeSubmenu" class="items">
+        <div v-for="item in items" :key="item.text" class="item" @click.stop @click="() => {goToPath(item.path); showSubmenu(item)}">
+          <div class="item-text">{{ item.text }}</div>
+        </div>
+      </div>
+      <div v-for="item in items" :key="item.text">
+        <div v-if="item.submenu && item === activeSubmenu" class="submenu">
+          <div v-for="subitem in item.submenu" :key="subitem.text" @click="goToPath(subitem.path)" class="item">
+            <div class='item-text'>{{ subitem.text }}</div>
+          </div>
+          <div class="item" @click="activeSubmenu=null">Вернуться к основному меню</div>
+        </div>
+      </div>
+    </div>
+
     <div v-if="windowWidth <= 800" class="burger" @click="toggleMenu" :class="{ open: menuIsOpen }"></div>
   </div>
 </template>
@@ -36,24 +54,22 @@
       };
     },
     mounted() {
-      document.addEventListener('click', this.hideSubmenu);
+      document.addEventListener('click', this.hideSubmenuWhenClickingOnDocument)
       window.addEventListener('resize', this.updateWindowWidth);
     },
     unmounted() {
-      document.removeEventListener('click', this.hideSubmenu);
+      document.removeEventListener('click', this.hideSubmenuWhenClickingOnDocument);
       window.removeEventListener('resize', this.updateWindowWidth);
     },
     methods: {
-      hideSubmenu() {
-        this.activeSubmenu = null;
+      hideSubmenuWhenClickingOnDocument() {
+        if (this.windowWidth > 800) this.activeSubmenu = null;
       },
       showSubmenu(item) {
         this.activeSubmenu = item;
       },
       goToPath(path) {
-        if (path) {
-          window.location.href = path;
-        }
+        if (path) window.location.href = path;
       },
       toggleMenu() {
         this.menuIsOpen = !this.menuIsOpen;
@@ -102,32 +118,32 @@
 
     .items {
       display: flex;
+    }
 
-      .item {
-        cursor: pointer;
-        position: relative;
-        margin-left: 40px;
+    .item {
+      cursor: pointer;
+      position: relative;
+      margin-left: 40px;
 
-        &-text {
-          color: $dark;
+      &-text {
+        color: $dark;
 
-          &:hover {
-            color: $secondary;
-          }
+        &:hover {
+          color: $secondary;
         }
       }
+    }
 
-      .submenu {
-        position: absolute;
-        top: 70px;
-        left: -50%;
-        background-color: $menu-background;
-        padding: 20px 30px;
-        border-radius: 5px;
+    .submenu {
+      position: absolute;
+      top: 70px;
+      left: -50%;
+      background-color: $menu-background;
+      padding: 20px 30px;
+      border-radius: 5px;
 
-        .item {
-          margin: 25px 0;
-        }
+      .item {
+        margin: 25px 0;
       }
     }
   }
@@ -138,17 +154,18 @@
     
     .items {
       flex-direction: column;
-      padding-top: 50px;
+      padding: 50px 0;
       transition: all 0.3s ease;
 
       .item {
         margin: 20px 0;
       }
+    }
 
-      .submenu {
-        position: static;
-        padding: 0;
-      }
+    .submenu {
+      position: static;
+      padding: 50px 0;
+      text-align: center;
     }
   }
 }
