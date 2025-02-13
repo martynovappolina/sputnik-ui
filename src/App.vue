@@ -51,5 +51,9 @@ export default {
     h2 {
       @include h2;
     }
+
+    @media (max-width: 400px) {
+      @include big-text;
+    }
   }
 </style>
