@@ -67,15 +67,15 @@
 
 <style lang='scss'>  
   .menu {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
     background-color: $menu-background;
     color: $dark;
-    padding: 30px;
+    padding: 30px 50px;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
 
     .logo {
       width: 130px;
@@ -130,23 +130,27 @@
         }
       }
     }
+  }
 
-    @media (max-width: 800px) {
-      .items {
-        flex-direction: column;
-        padding-top: 50px;
-        transition: all 0.3s ease;
+  @media (max-width: 800px) {
+  .menu {
+    padding: 30px;
+    
+    .items {
+      flex-direction: column;
+      padding-top: 50px;
+      transition: all 0.3s ease;
 
-        .item {
-          margin: 20px 0;
-        }
+      .item {
+        margin: 20px 0;
+      }
 
-        .submenu {
-          position: static;
-          padding: 0;
-        }
+      .submenu {
+        position: static;
+        padding: 0;
       }
     }
   }
+}
 </style>
 

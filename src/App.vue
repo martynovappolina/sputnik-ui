@@ -1,5 +1,5 @@
 <template>
-  <div id="sputnik-ui">
+  <div class="sputnik-ui">
     <Menu :items="menuItems" />
   </div>
 </template>
@@ -35,16 +35,21 @@ export default {
 </script>
 
 <style lang="scss">
-#sputnik-ui {
-  background-color: $primary;
-  height: 5000px;
-  @include text;
-  
-  h1 {
-    @include h1;
+  body {
+    margin: 0;
   }
-  h2 {
-    @include h2;
+
+  .sputnik-ui {
+    background-color: $primary;
+    height: 800px;
+    
+    @include text;
+    
+    h1 {
+      @include h1;
+    }
+    h2 {
+      @include h2;
+    }
   }
-}
 </style>
