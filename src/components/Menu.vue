@@ -1,11 +1,11 @@
 <template>
   <div v-if="windowWidth > 800" class="menu">
-    <div class="logo" :style="{ backgroundImage: `url(${logoPath})` }" @click="goToPath('/')" />
+    <div class="logo" :style="{ backgroundImage: `url(${logoIconPath})` }" @click="onClickLogo" />
     <div v-if="windowWidth > 800" class="items">
-      <div v-for="item in items" :key="item.text" class="item" @click.stop @click="() => {goToPath(item.path); showSubmenu(item)}">
+      <div v-for="item in items" :key="item.text" class="item" @click.stop="onItemClick(item)">
         <div class="item-text">{{ item.text }}</div>
         <div v-if="item.submenu && item === activeSubmenu" class="submenu" @click.stop>
-          <div v-for="subitem in item.submenu" :key="subitem.text" @click="goToPath(subitem.path)" class="item">
+          <div v-for="subitem in item.submenu" :key="subitem.text" @click="subitem.onClick" class="item">
             <div class='item-text'>{{ subitem.text }}</div>
           </div>
         </div>
@@ -15,19 +15,19 @@
 
   <div v-if="windowWidth <= 800" class="menu">
     <div class="menu-row">
-      <div class="logo" :style="{ backgroundImage: `url(${logoPath})` }" @click="goToPath('/')" />
+      <div class="logo" :style="{ backgroundImage: `url(${logoIconPath})` }" @click="onClickLogo" />
       <div class="burger" @click="toggleMenu" :class="{ open: menuIsOpen }"></div>
     </div>
     
     <div v-if="menuIsOpen">
       <div v-if="!activeSubmenu" class="items">
-        <div v-for="item in items" :key="item.text" class="item" @click.stop @click="() => {goToPath(item.path); showSubmenu(item)}">
+        <div v-for="item in items" :key="item.text" class="item" @click.stop="onItemClick(item)">
           <div class="item-text">{{ item.text }}</div>
         </div>
       </div>
       <div v-for="item in items" :key="item.text">
         <div v-if="item.submenu && item === activeSubmenu" class="submenu">
-          <div v-for="subitem in item.submenu" :key="subitem.text" @click="goToPath(subitem.path)" class="item">
+          <div v-for="subitem in item.submenu" :key="subitem.text" class="item" @click="subitem.onClick">
             <div class='item-text'>{{ subitem.text }}</div>
           </div>
           <div class="item-text" @click="activeSubmenu=null">Вернуться к основному меню</div>
@@ -45,10 +45,14 @@
         type: Array,  
         required: true  
       },
-      logoPath: {
+      logoIconPath: {
         type: String,
         default: require('@/assets/icons/logo.svg')
-      }
+      },
+      onClickLogo: {
+        type: Function,
+        default: () => window.location.href = '/'
+      },
     },
     data() {
       return {
@@ -72,14 +76,14 @@
       showSubmenu(item) {
         this.activeSubmenu = item;
       },
-      goToPath(path) {
-        if (path) window.location.href = path;
-      },
       toggleMenu() {
         this.menuIsOpen = !this.menuIsOpen;
       },
       updateWindowWidth() {
         this.windowWidth = window.innerWidth;
+      },
+      onItemClick(item) {
+        item.onClick ? item.onClick() : this.showSubmenu(item)
       }
     }
   };
