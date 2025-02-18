@@ -92,6 +92,7 @@
 <style lang='scss'>  
   .menu {
     position: sticky;
+    z-index: 100;
     top: 0;
     width: 100%;
     background-color: $menu-background;
