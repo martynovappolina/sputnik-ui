@@ -2,18 +2,21 @@
   <div class="sputnik-ui">
     <Menu :items="menuItems" />
     <Cover />
+    <CardsBlock />
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue';
 import Cover from './components/Cover.vue';
+import CardsBlock from './components/CardsBlock.vue';
 
 export default {
   name: 'App',
   components: {
     Menu,
-    Cover
+    Cover,
+    CardsBlock
   },
   
   data() {
@@ -43,8 +46,7 @@ export default {
   }
 
   .sputnik-ui {
-    background-color: $primary;
-    height: 800px;
+    margin: 0 auto;
     
     @include text;
     
