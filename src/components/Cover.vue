@@ -9,7 +9,7 @@
 
 <script>
     export default {
-    name: 'CoverWithText',  
+        name: 'CoverWithText',  
         props: {  
             backgroundImagePath: {
                 type: String,
