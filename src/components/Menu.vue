@@ -1,7 +1,7 @@
 <template>
   <div v-if="windowWidth > 800" class="menu">
     <div class="logo" :style="{ backgroundImage: `url(${logoIconPath})` }" @click="onClickLogo" />
-    <div v-if="windowWidth > 800" class="items">
+    <div class="items">
       <div v-for="item in items" :key="item.text" class="item" @click.stop="onItemClick(item)">
         <div class="item-text">{{ item.text }}</div>
         <div v-if="item.submenu && item === activeSubmenu" class="submenu" @click.stop>
