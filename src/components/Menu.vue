@@ -89,7 +89,7 @@
   };
 </script>
 
-<style lang='scss'>  
+<style lang='scss' scoped>  
   .menu {
     position: sticky;
     z-index: 100;

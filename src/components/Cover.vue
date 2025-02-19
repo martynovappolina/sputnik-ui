@@ -27,7 +27,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .cover {
         position: absolute;
         background-color: $primary-transparent;
