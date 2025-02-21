@@ -1,0 +1,80 @@
+<template>
+    <div class="contacts">
+        <h1>{{ title }}</h1>
+        <h2>{{ subtitle }}</h2>
+        <a class="telephoneNumber" :href="`tel:${telephoneNumber}`">{{ telephoneNumber }}</a>
+        <a class="email" :href="`mailto:${email}`">{{ email }}</a>
+        <div class="address">{{ address }}</div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: 'ContactsCard',
+        props: {
+            title: {
+                type: String,
+                default: 'Контакты'
+            },
+            subtitle: {
+                type: String,
+                default: 'ООО «ПП «Спутник»'
+            },
+            telephoneNumber: {
+                type: String,
+                default: '8 495 855-64-80'
+            },
+            email: {
+                type: String,
+                default: 'info@corp.sputnik.ru'
+            },
+            address: {
+                type: String,
+                default: '108811 г. Москва, п. Московский, 22-й километр Киевского шоссе, домовладение 6, стр. 1'
+            },
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    .contacts {
+        text-align: center;
+        margin: 150px auto;
+        padding: 0 30px;
+        max-width: 450px;
+        
+        h2 {
+            margin: 0;
+        }
+
+        .telephoneNumber {
+            color: $dark;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .email {
+            color: $primary;
+
+            &:hover {
+                color: $secondary;
+            }
+
+            &:visited {
+                color: $secondary2;
+            }
+        }
+
+        .address {
+            @include small-text;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 400px) {
+            .address {
+                @include text;
+            }
+        }
+    }
+</style>
