@@ -4,6 +4,7 @@
     <Cover />
     <CardsBlock />
     <Contacts />
+    <Footer />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Menu from './components/Menu.vue';
 import Cover from './components/Cover.vue';
 import CardsBlock from './components/CardsBlock.vue';
 import Contacts from './components/Contacts.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     Menu,
     Cover,
     CardsBlock,
-    Contacts
+    Contacts,
+    Footer
   }
 }
 </script>
