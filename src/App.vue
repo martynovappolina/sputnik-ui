@@ -1,8 +1,9 @@
 <template>
   <div class="sputnik-ui">
-    <Menu :items="menuItems" />
+    <Menu />
     <Cover />
     <CardsBlock />
+    <Contacts />
   </div>
 </template>
 
@@ -10,32 +11,15 @@
 import Menu from './components/Menu.vue';
 import Cover from './components/Cover.vue';
 import CardsBlock from './components/CardsBlock.vue';
+import Contacts from './components/Contacts.vue';
 
 export default {
   name: 'App',
   components: {
     Menu,
     Cover,
-    CardsBlock
-  },
-  
-  data() {
-    return {
-      menuItems: [
-        { text: 'Пункт 1', submenu: [
-          { text: 'Подпункт', onClick: () => window.location.href = '/punkt1/sub1' }, 
-          { text: 'Подпункт', onClick: () => window.location.href = '/punkt1/sub2' },
-          { text: 'Подпункт', onClick: () => window.location.href = '/punkt1/sub3' },
-          { text: 'Подпункт', onClick: () => window.location.href = '/punkt1/sub4' },
-        ] },
-        { text: 'Пункт 2', submenu: [
-          { text: 'Подпункт', onClick: () => window.location.href = '/punkt2/sub1' }, 
-          { text: 'Подпункт', onClick: () => window.location.href = '/punkt2/sub2' }
-        ] },
-        { text: 'Пункт 3', onClick: () => window.location.href = '/punkt3' },
-        { text: 'Пункт 4', onClick: () => window.location.href = '/punkt4' }
-      ]
-    };
+    CardsBlock,
+    Contacts
   }
 }
 </script>
