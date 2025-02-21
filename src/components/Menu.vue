@@ -2,9 +2,9 @@
   <div v-if="windowWidth > 800" class="menu">
     <div class="logo" :style="{ backgroundImage: `url(${logoIconPath})` }" @click="onClickLogo" />
     <div class="items">
-      <div v-for="item in items" :key="item.text" class="item" @click.stop="onItemClick(item)">
+      <div v-for="(item, index) in items" :key="item.text" class="item" @click.stop="onItemClick(index)">
         <div class="item-text">{{ item.text }}</div>
-        <div v-if="item.submenu && item === activeSubmenu" class="submenu" @click.stop>
+        <div v-if="item.submenu && JSON.stringify(item) === JSON.stringify(items[activeSubmenu])" class="submenu" @click.stop>
           <div v-for="subitem in item.submenu" :key="subitem.text" @click="subitem.onClick" class="item">
             <div class='item-text'>{{ subitem.text }}</div>
           </div>
@@ -12,7 +12,6 @@
       </div>
     </div>
   </div>
-
   <div v-if="windowWidth <= 800" class="menu">
     <div class="menu-row">
       <div class="logo" :style="{ backgroundImage: `url(${logoIconPath})` }" @click="onClickLogo" />
@@ -20,13 +19,13 @@
     </div>
     
     <div v-if="menuIsOpen">
-      <div v-if="!activeSubmenu" class="items">
-        <div v-for="item in items" :key="item.text" class="item" @click.stop="onItemClick(item)">
+      <div v-if="activeSubmenu == null" class="items">
+        <div v-for="(item, index) in items" :key="item.text" class="item" @click.stop="onItemClick(index)">
           <div class="item-text">{{ item.text }}</div>
         </div>
       </div>
-      <div v-for="item in items" :key="item.text">
-        <div v-if="item.submenu && item === activeSubmenu" class="submenu">
+      <div v-for="(item, index) in items" :key="item.text">
+        <div v-if="item.submenu && index === activeSubmenu" class="submenu">
           <div v-for="subitem in item.submenu" :key="subitem.text" class="item" @click="subitem.onClick">
             <div class='item-text'>{{ subitem.text }}</div>
           </div>
@@ -42,7 +41,7 @@
     name: 'MainMenu',  
     props: {  
       items: {  
-        type: Array,  
+        type: Array, 
         default: () => [
           { text: 'Пункт 1', submenu: [
             { text: 'Подпункт', onClick: () => window.location.href = '/punkt1/sub1' }, 
@@ -86,8 +85,8 @@
       hideSubmenuWhenClickingOnDocument() {
         if (this.windowWidth > 800) this.activeSubmenu = null;
       },
-      showSubmenu(item) {
-        this.activeSubmenu = item;
+      showSubmenu(index) {
+        this.activeSubmenu = index;
       },
       toggleMenu() {
         this.menuIsOpen = !this.menuIsOpen;
@@ -95,8 +94,9 @@
       updateWindowWidth() {
         this.windowWidth = window.innerWidth;
       },
-      onItemClick(item) {
-        item.onClick ? item.onClick() : this.showSubmenu(item)
+      onItemClick(index) {
+        const item = this.items[index];
+        item.onClick ? item.onClick() : this.showSubmenu(index);
       }
     }
   };
@@ -114,6 +114,7 @@
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
     .logo {
       width: 130px;
@@ -163,6 +164,7 @@
       background-color: $menu-background;
       padding: 20px 30px;
       border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
       .item {
         margin: 25px 0;
@@ -184,6 +186,10 @@
 
     .item {
       margin: 20px 0;
+    }
+
+    .submenu {
+      box-shadow: none;
     }
     
     .items, .submenu {
