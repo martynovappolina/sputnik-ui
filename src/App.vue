@@ -2,7 +2,7 @@
   <Page>
     <Menu />
     <Cover />
-    <CardsBlock />
+    <HorizontalCardsBlock />
     <Contacts />
     <Footer />
   </Page>
@@ -12,7 +12,7 @@
   import Page from './components/Page.vue';
   import Menu from './components/Menu.vue';
   import Cover from './components/Cover.vue';
-  import CardsBlock from './components/CardsBlock.vue';
+  import HorizontalCardsBlock from './components/HorizontalCardsBlock.vue';
   import Contacts from './components/Contacts.vue';
   import Footer from './components/Footer.vue';
 
@@ -22,7 +22,7 @@
       Page,
       Menu,
       Cover,
-      CardsBlock,
+      HorizontalCardsBlock,
       Contacts,
       Footer
     }

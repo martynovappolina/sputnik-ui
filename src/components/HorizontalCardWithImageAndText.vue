@@ -17,7 +17,7 @@
 
 <script>
     export default {
-        name: 'CardWithImageAndText',
+        name: 'HorizontalCardWithImageAndText',
         props: { 
             item: {
                 type: Object,

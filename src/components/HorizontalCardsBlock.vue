@@ -1,16 +1,16 @@
 <template>
     <div class="cards">
-        <CardWithImageAndText v-for="item in items" :item="item" :key="item.header" />
+        <HorizontalCardWithImageAndText v-for="item in items" :item="item" :key="item.header" />
     </div>
 </template>
 
 <script>
-    import CardWithImageAndText from './CardWithImageAndText.vue';
+    import HorizontalCardWithImageAndText from './HorizontalCardWithImageAndText.vue';
 
     export default {
         name: 'CardsBlock',
         components: {
-            CardWithImageAndText
+            HorizontalCardWithImageAndText
         },
         props: {  
             items: {
