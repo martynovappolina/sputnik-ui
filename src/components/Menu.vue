@@ -34,6 +34,8 @@
       </div>
     </div>
   </div>
+
+  <div style="height: 90px"></div>
 </template>
 
 <script>
@@ -104,7 +106,7 @@
 
 <style lang='scss' scoped>  
   .menu {
-    position: sticky;
+    position: fixed;
     z-index: 100;
     top: 0;
     width: 100%;
