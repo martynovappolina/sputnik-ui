@@ -201,21 +201,21 @@
       text-align: center;
     }
   }
-}
+  }
 
-@media (max-width: 400px) {
-  .menu {
-    .logo {
-      width: 150px;
-      height: 50px;
-      background-size: contain;
-    }
+  @media (max-width: 400px) {
+    .menu {
+      .logo {
+        width: 150px;
+        height: 50px;
+        background-size: contain;
+      }
 
-    .burger, .burger.open {
-      height: 50px;
-      width: 50px;
+      .burger, .burger.open {
+        height: 50px;
+        width: 50px;
+      }
     }
   }
-}
 </style>
 
