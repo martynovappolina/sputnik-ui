@@ -5,7 +5,7 @@
             backgroundImage: `url(${item.imagePath})` 
         }" />
         <div class="text-block">
-            <h2>{{ item.header }}</h2>
+            <h3>{{ item.header }}</h3>
             <p>{{ item.text }}</p>
         </div>
         <div class="image" :style="{

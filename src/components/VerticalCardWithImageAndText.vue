@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <h1>{{ header }}</h1>
+        <h2>{{ header }}</h2>
         <div class="image" :style="{ backgroundImage: `url(${imagePath})` }"></div>
         <p>{{ text }}</p>
     </div>
@@ -37,7 +37,7 @@
         max-width: 800px;
         margin: 150px auto;
 
-        h1 {
+        h2 {
             color: $primary;
         }
 

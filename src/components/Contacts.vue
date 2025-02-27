@@ -1,7 +1,7 @@
 <template>
     <div class="contacts">
-        <h1>{{ title }}</h1>
-        <h2>{{ subtitle }}</h2>
+        <h2>{{ title }}</h2>
+        <h3>{{ subtitle }}</h3>
         <a class="telephoneNumber" :href="`tel:${telephoneNumber}`">{{ telephoneNumber }}</a>
         <a class="email" :href="`mailto:${email}`">{{ email }}</a>
         <div class="address">{{ address }}</div>
@@ -43,7 +43,7 @@
         padding: 0 30px;
         max-width: 450px;
         
-        h2 {
+        h3 {
             margin: 0;
         }
 

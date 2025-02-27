@@ -2,8 +2,10 @@
   <Page>
     <Menu />
     <Cover />
+    <HorizontalCardsBlock />
     <VerticalCardWithImageAndText />
     <NumberedList />
+    <Contacts />
     <Footer />
   </Page>
 </template>
@@ -12,9 +14,11 @@
   import Page from './components/Page.vue';
   import Menu from './components/Menu.vue';
   import Cover from './components/Cover.vue';
-  import Footer from './components/Footer.vue';
   import VerticalCardWithImageAndText from './components/VerticalCardWithImageAndText.vue';
+  import HorizontalCardsBlock from './components/HorizontalCardsBlock.vue';
   import NumberedList from './components/NumberedList.vue';
+  import Contacts from './components/Contacts.vue';
+  import Footer from './components/Footer.vue';
 
   export default {
     name: 'App',
@@ -24,6 +28,8 @@
       Cover,
       Footer,
       VerticalCardWithImageAndText,
+      HorizontalCardsBlock,
+      Contacts,
       NumberedList
     }
   }

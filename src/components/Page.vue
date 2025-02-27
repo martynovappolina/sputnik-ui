@@ -27,10 +27,15 @@
 
         h1 {
             @include font;
-            font-size: 52px;
+            font-size: 72px;
         }
 
         h2 {
+            @include font;
+            font-size: 52px;
+        }
+
+        h3 {
             @include font;
             font-size: 32px;
         }
@@ -39,9 +44,12 @@
             @include big-text;
 
             h1 {
-                font-size: 40px;
+                font-size: 54px;
             }
             h2 {
+                font-size: 40px;
+            }       
+            h3 {
                 font-size: 28px;
             }       
         }

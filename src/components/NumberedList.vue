@@ -1,6 +1,6 @@
 <template>  
   <div class="numbered-list">  
-    <h1>{{ title }}</h1>  
+    <h2>{{ title }}</h2>  
     <p class="description">{{ description }}</p>  
     <ol>  
       <li v-for="(item, index) in list" :key="index" class="item">  
@@ -8,7 +8,7 @@
           <div :style="{ marginLeft: index === 0 ? '-5px' : '0px' }" class="number">{{ index + 1 }}</div> 
         </div>
         <div class="content">  
-          <h2>{{ item.title }}</h2>  
+          <h3>{{ item.title }}</h3>  
           <p>{{ item.description }}</p>  
         </div>  
       </li>  
@@ -61,7 +61,7 @@
       padding: 0;
     }
 
-    h1 {
+    h2 {
       color: $primary;
     }
 
@@ -75,7 +75,7 @@
       margin: 10px 0;
       max-width: 800px;
 
-      h2 {
+      h3 {
         color: $secondary;
       }
 
