@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="column" v-for="item in items" :key="item.text">
-      <h2 @click="item.onClick ? item.onClick() : ()=>{}">{{ item.text }}</h2>
+      <h3 @click="item.onClick ? item.onClick() : ()=>{}">{{ item.text }}</h3>
       <ul v-if="item.submenu">
         <li v-for="subitem in item.submenu" :key="subitem.text" @click="subitem.onClick">
           {{ subitem.text }}
