@@ -5,6 +5,7 @@
     <HorizontalCardsBlock />
     <VerticalCardWithImageAndText />
     <NumberedList />
+    <TextBlockWithHeader />
     <Contacts />
     <Footer />
   </Page>
@@ -19,6 +20,7 @@
   import NumberedList from './components/NumberedList.vue';
   import Contacts from './components/Contacts.vue';
   import Footer from './components/Footer.vue';
+  import TextBlockWithHeader from './components/TextBlockWithHeader.vue';
 
   export default {
     name: 'App',
@@ -30,7 +32,8 @@
       VerticalCardWithImageAndText,
       HorizontalCardsBlock,
       Contacts,
-      NumberedList
+      NumberedList,
+      TextBlockWithHeader
     }
   }
 </script>
