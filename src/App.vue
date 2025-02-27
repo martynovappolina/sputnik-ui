@@ -7,6 +7,7 @@
     <NumberedList />
     <TextBlockWithHeader />
     <MultiColumnListWithIcons />
+    <Stages />
     <Contacts />
     <Footer />
   </Page>
@@ -23,6 +24,7 @@
   import Footer from './components/Footer.vue';
   import TextBlockWithHeader from './components/TextBlockWithHeader.vue';
   import MultiColumnListWithIcons from './components/MultiColumnListWithIcons.vue';
+  import Stages from './components/Stages.vue';
 
   export default {
     name: 'App',
@@ -36,7 +38,8 @@
       Contacts,
       NumberedList,
       TextBlockWithHeader,
-      MultiColumnListWithIcons
+      MultiColumnListWithIcons,
+      Stages
     }
   }
 </script>
