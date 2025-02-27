@@ -3,7 +3,7 @@
         <h2>{{ title }}</h2>
         <h3>{{ subtitle }}</h3>
         <a class="telephoneNumber" :href="`tel:${telephoneNumber}`">{{ telephoneNumber }}</a>
-        <a class="email" :href="`mailto:${email}`">{{ email }}</a>
+        <a :href="`mailto:${email}`">{{ email }}</a>
         <div class="address">{{ address }}</div>
     </div>
 </template>
@@ -52,18 +52,6 @@
             text-decoration: none;
             display: block;
             margin: 5px 0;
-        }
-
-        .email {
-            color: $primary;
-
-            &:hover {
-                color: $secondary;
-            }
-
-            &:visited {
-                color: $secondary2;
-            }
         }
 
         .address {
