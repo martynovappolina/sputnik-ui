@@ -3,7 +3,7 @@
     <h2>{{ title }}</h2>  
     <p class="description">{{ description }}</p>  
     <ol>  
-      <li v-for="(item, index) in list" :key="index" class="item">  
+      <li v-for="(item, index) in items" :key="index" class="item">  
         <div class="circle">
           <div :style="{ marginLeft: index === 0 ? '-5px' : '0px' }" class="number">{{ index + 1 }}</div> 
         </div>
@@ -28,7 +28,7 @@
         type: String,  
         default: 'Мы усердно работаем каждый день, чтобы сделать жизнь наших клиентов лучше и счастливее.'
       },  
-      list: {  
+      items: {  
         type: Array,  
         default: () => [
           {
