@@ -3,6 +3,7 @@
     <Menu />
     <Cover />
     <VerticalCardWithImageAndText />
+    <NumberedList />
     <Footer />
   </Page>
 </template>
@@ -13,6 +14,7 @@
   import Cover from './components/Cover.vue';
   import Footer from './components/Footer.vue';
   import VerticalCardWithImageAndText from './components/VerticalCardWithImageAndText.vue';
+  import NumberedList from './components/NumberedList.vue';
 
   export default {
     name: 'App',
@@ -21,7 +23,8 @@
       Menu,
       Cover,
       Footer,
-      VerticalCardWithImageAndText
+      VerticalCardWithImageAndText,
+      NumberedList
     }
   }
 </script>

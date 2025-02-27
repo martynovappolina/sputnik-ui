@@ -4,7 +4,9 @@
     <p class="description">{{ description }}</p>  
     <ol>  
       <li v-for="(item, index) in list" :key="index" class="item">  
-        <div class="number"><h1>{{ index + 1 }}</h1></div>  
+        <div class="circle">
+          <div :style="{ marginLeft: index === 0 ? '-5px' : '0px' }" class="number">{{ index + 1 }}</div> 
+        </div>
         <div class="content">  
           <h2>{{ item.title }}</h2>  
           <p>{{ item.description }}</p>  
@@ -77,7 +79,7 @@
         color: $secondary;
       }
 
-      .number {   
+      .circle {
         border-radius: 50%;
         border: solid 2px $primary;
         width: 100px;
@@ -87,7 +89,12 @@
         align-items: center;  
         justify-content: center;  
         margin-right: 50px;  
-        color: $primary; 
+      }
+
+      .number {    
+        color: $primary;
+        font-weight: 700;
+        font-size: 52px;
       }   
     }  
   }   
@@ -95,11 +102,14 @@
   @media (max-width: 800px) {
       .numbered-list {
           .item {
-            .number {
+            .circle {
               margin-right: 30px;
-              height: 50px;
-              width: 50px;
-              min-width: 50px;
+              height: 60px;
+              width: 60px;
+              min-width: 60px;
+            }
+            .number {
+              font-size: 40px;
             }
           }
       }
@@ -111,8 +121,9 @@
             flex-direction: column;
             text-align: center;
 
-            .number {
-              margin: 0;
+            .circle {
+              margin-right: 0;
+              margin-top: 80px;
               height: 70px;
               width: 70px;
               min-width: 70px;

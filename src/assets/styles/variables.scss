@@ -23,16 +23,6 @@ $disabled: #9CA3AF;
     font-size: 26px; 
 }
 
-@mixin h1 {  
-    @include font;
-    font-size: 52px;
-} 
-
-@mixin h2 {  
-    @include font;
-    font-size: 32px;
-} 
-
 @mixin text {  
     @include font;
     font-size: 20px;

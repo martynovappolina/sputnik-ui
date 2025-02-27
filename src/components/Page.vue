@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div class="page-template-sputnik-ui-kit">
         <slot />
     </div>
 </template>
@@ -20,19 +20,31 @@
     }
 </script>
 
-<style lang='scss' scoped>
-    .page {
+<style lang='scss'>
+    .page-template-sputnik-ui-kit {
         @include text;
-        
+        color: $dark;
+
         h1 {
-            @include h1;
+            @include font;
+            font-size: 52px;
         }
+
         h2 {
-            @include h2;
+            @include font;
+            font-size: 32px;
         }
 
         @media (max-width: 400px) {
             @include big-text;
+
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 28px;
+            }       
         }
+
     }
 </style>
