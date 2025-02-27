@@ -8,6 +8,7 @@
     <TextBlockWithHeader />
     <MultiColumnListWithIcons />
     <Stages />
+    <GridWithCards />
     <Contacts />
     <Footer />
   </Page>
@@ -25,6 +26,7 @@
   import TextBlockWithHeader from './components/TextBlockWithHeader.vue';
   import MultiColumnListWithIcons from './components/MultiColumnListWithIcons.vue';
   import Stages from './components/Stages.vue';
+  import GridWithCards from './components/GridWithCards.vue';
 
   export default {
     name: 'App',
@@ -39,7 +41,8 @@
       NumberedList,
       TextBlockWithHeader,
       MultiColumnListWithIcons,
-      Stages
+      Stages,
+      GridWithCards
     }
   }
 </script>

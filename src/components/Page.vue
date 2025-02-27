@@ -40,6 +40,18 @@
             font-size: 32px;
         }
 
+        a {
+            color: $primary;
+
+            &:hover {
+                color: $secondary;
+            }
+
+            &:visited {
+                color: $secondary2;
+            }
+        }
+
         @media (max-width: 400px) {
             @include big-text;
 
