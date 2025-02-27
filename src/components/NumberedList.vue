@@ -51,7 +51,8 @@
 
 <style lang='scss' scoped>  
   .numbered-list {
-    padding: 0 30px;
+    padding: 30px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;

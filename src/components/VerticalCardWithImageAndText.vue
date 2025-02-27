@@ -33,7 +33,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 0 30px;
+        padding: 30px;
         max-width: 800px;
         margin: 150px auto;
 

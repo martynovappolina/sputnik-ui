@@ -40,7 +40,7 @@
     .contacts {
         text-align: center;
         margin: 150px auto;
-        padding: 0 30px;
+        padding: 30px;
         max-width: 450px;
         
         h3 {
