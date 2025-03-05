@@ -132,7 +132,7 @@
             }
         }
 
-        @media (max-width: 1250px) {
+        @media (max-width: 1320px) {
             .items {
                 .row {
                     justify-content: center !important;
