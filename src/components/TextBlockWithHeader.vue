@@ -30,6 +30,7 @@ export default {
 <style lang="scss" scoped>  
     .text-block-with-header {
         max-width: 1200px;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
