@@ -112,7 +112,7 @@
     width: 100%;
     background-color: $menu-background;
     color: $dark;
-    padding: 30px 50px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -176,7 +176,6 @@
 
   @media (max-width: 800px) {
   .menu {
-    padding: 30px;
     display: block;
     
     &-row {

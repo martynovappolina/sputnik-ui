@@ -3,11 +3,11 @@
     <Menu />
     <Cover />
     <HorizontalCardsBlock />
-    <VerticalCardWithImageAndText />
+    <VerticalCardWithImageAndText theme="dark" />
     <NumberedList />
-    <TextBlockWithHeader />
+    <TextBlockWithHeader theme="dark" />
     <MultiColumnListWithIcons />
-    <Stages />
+    <Stages theme="dark" />
     <GridWithCards />
     <Contacts />
     <Footer />

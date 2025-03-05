@@ -1,8 +1,10 @@
 <template>
-    <div class="card">
-        <h2>{{ header }}</h2>
-        <div class="image" :style="{ backgroundImage: `url(${imagePath})` }"></div>
-        <p>{{ text }}</p>
+    <div class="wrapper" :style="{ backgroundColor: theme === 'dark' ? '#eff6ff' : '' }">
+        <div class="card">
+            <h2>{{ header }}</h2>
+            <div class="image" :style="{ backgroundImage: `url(${imagePath})` }"></div>
+            <p>{{ text }}</p>
+        </div>
     </div>
 </template>
 
@@ -21,6 +23,10 @@
             text: {
                 type: String,
                 default: 'В этот день солнце светило ярко. По утрам птицы пели, а ветер играл с листьями. Дети радостно бегали по парку, улыбаясь друг другу. Напротив качелей стояла девушка с книгой. '
+            },
+            theme: {
+                type: String,
+                default: 'light'
             }
         }
     }
@@ -33,9 +39,8 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 30px;
         max-width: 800px;
-        margin: 150px auto;
+        margin: 0 auto;
 
         h2 {
             color: $primary;

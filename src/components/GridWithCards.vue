@@ -1,12 +1,14 @@
 <template>
-    <div class="grid-with-cards">
-        <h2>{{ title }}</h2>
-        <div class="items">
-            <div v-for="item in items" :key="item.header" class="item">
-                <div class="image" :style="{ backgroundImage: `url(${item.imagePath})` }"></div>
-                <h3>{{ item.title }}</h3>
-                <p>{{ item.description }}</p>
-                <a :href="item.link" target="_blank">{{ item.linkName }}</a>
+    <div class="wrapper" :style="{ backgroundColor: theme === 'dark' ? '#eff6ff' : '' }">
+        <div class="grid-with-cards">
+            <h2>{{ title }}</h2>
+            <div class="items">
+                <div v-for="item in items" :key="item.header" class="item">
+                    <div class="image" :style="{ backgroundImage: `url(${item.imagePath})` }"></div>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                    <a :href="item.link" target="_blank">{{ item.linkName }}</a>
+                </div>
             </div>
         </div>
     </div>
@@ -80,6 +82,10 @@
                         linkName: 'Ссылка на партнера'
                     },
                 ],
+            },
+            theme: {
+                type: String,
+                default: 'light'
             }
         }
     }
@@ -87,7 +93,6 @@
 
 <style lang="scss" scoped>
     .grid-with-cards {
-        padding: 30px;
         margin: 150px auto;
         display: flex;
         flex-direction: column;

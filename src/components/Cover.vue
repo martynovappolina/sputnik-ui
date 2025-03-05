@@ -33,6 +33,7 @@
         background-color: $primary-transparent;
         width: 100%;
         height: 100%;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -47,7 +48,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 800px;
+            min-height: 100vh;
             width: 100%;
         }
 

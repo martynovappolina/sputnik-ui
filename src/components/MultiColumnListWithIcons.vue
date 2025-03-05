@@ -1,14 +1,16 @@
 <template>
-    <div class="multi-column-list-with-icons">
-        <h2>{{ header }}</h2>
-        <p class="description">{{ description }}</p>
-        <div class="items">
-            <div v-for="item in items" :key="item.header" class="item">
-                <div class="header-line">
-                    <div class="icon" :style="{ backgroundImage: `url(${item.icon})` }" />
-                    <h3>{{ item.header }}</h3>
+    <div class="wrapper" :style="{ backgroundColor: theme === 'dark' ? '#eff6ff' : '' }">
+        <div class="multi-column-list-with-icons">
+            <h2>{{ header }}</h2>
+            <p class="description">{{ description }}</p>
+            <div class="items">
+                <div v-for="item in items" :key="item.header" class="item">
+                    <div class="header-line">
+                        <div class="icon" :style="{ backgroundImage: `url(${item.icon})` }" />
+                        <h3>{{ item.header }}</h3>
+                    </div>
+                    <p>{{ item.description }}</p>
                 </div>
-                <p>{{ item.description }}</p>
             </div>
         </div>
     </div>
@@ -33,30 +35,39 @@
                         {
                             icon: require('@/assets/icons/star.svg'),
                             header: 'Преимущество 1',
-                            description: 'Преимущество — это положительная черта, качество или характеристика, которые ставят объект в более выгодное положение по сравнению с другими.'
+                            description: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
                             icon: require('@/assets/icons/star.svg'),
                             header: 'Преимущество 2',
-                            description: 'Преимущество — это положительная черта, качество или характеристика, которые ставят объект в более выгодное положение по сравнению с другими.'
+                            description: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
                             icon: require('@/assets/icons/star.svg'),
                             header: 'Преимущество 3',
-                            description: 'Преимущество — это положительная черта, качество или характеристика, которые ставят объект в более выгодное положение по сравнению с другими.'
+                            description: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
                             icon: require('@/assets/icons/star.svg'),
                             header: 'Преимущество 4',
-                            description: 'Преимущество — это положительная черта, качество или характеристика, которые ставят объект в более выгодное положение по сравнению с другими.'
+                            description: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
                             icon: require('@/assets/icons/star.svg'),
                             header: 'Преимущество 5',
-                            description: 'Преимущество — это положительная черта, качество или характеристика, которые ставят объект в более выгодное положение по сравнению с другими.'
+                            description: 'Преимущество — это положительная черта, качество или характеристика'
+                        },
+                        {
+                            icon: require('@/assets/icons/star.svg'),
+                            header: 'Преимущество 6',
+                            description: 'Преимущество — это положительная черта, качество или характеристика'
                         },
                     ]
                 }
+            },
+            theme: {
+                type: String,
+                default: 'light'
             }
         },
     }
@@ -64,8 +75,7 @@
 
 <style lang="scss" scoped>
     .multi-column-list-with-icons {
-        padding: 30px;
-        margin: 150px auto;
+        margin: 0 auto;
         max-width: 1200px;
 
         h2 {
@@ -82,7 +92,7 @@
             
             .item {
                 flex: 0 0 calc(33.333% - 60px);
-                margin: 30px;
+                margin: 50px 30px;
 
                 @media (max-width: 1200px) {
                     flex: 0 0 calc(50% - 60px);
