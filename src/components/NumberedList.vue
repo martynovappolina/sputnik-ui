@@ -1,25 +1,31 @@
 <template>  
-  <div class="numbered-list">  
-    <h2>{{ title }}</h2>  
-    <p class="description">{{ description }}</p>  
-    <ol>  
-      <li v-for="(item, index) in items" :key="index" class="item">  
-        <div class="circle">
-          <div :style="{ marginLeft: index === 0 ? '-5px' : '0px' }" class="number">{{ index + 1 }}</div> 
-        </div>
-        <div class="content">  
-          <h3>{{ item.title }}</h3>  
-          <p>{{ item.description }}</p>  
-        </div>  
-      </li>  
-    </ol>  
-  </div>  
+  <div class="wrapper" :style="{ backgroundColor: theme === 'dark' ? '#eff6ff' : '' }">  
+    <div class="numbered-list">  
+      <h2>{{ title }}</h2>  
+      <p class="description">{{ description }}</p>  
+      <ol>  
+        <li v-for="(item, index) in items" :key="index" class="item">  
+          <div class="circle">
+            <div :style="{ marginLeft: index === 0 ? '-5px' : '0px' }" class="number">{{ index + 1 }}</div> 
+          </div>
+          <div class="content">  
+            <h3>{{ item.title }}</h3>  
+            <p>{{ item.description }}</p>  
+          </div>  
+        </li>  
+      </ol>  
+    </div>
+  </div>
 </template>  
 
 <script>  
   export default {  
     name: 'NumberedList',  
-    props: {  
+    props: {
+      theme: {
+        type: String,
+        default: 'light'
+      },
       title: {  
         type: String,  
         default: 'Преимущества'
@@ -51,12 +57,12 @@
 
 <style lang='scss' scoped>  
   .numbered-list {
-    padding: 30px;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 150px auto;
+    margin: 0 auto;
+    min-height: 100vh;
 
     ol {
       padding: 0;

@@ -1,5 +1,5 @@
 <template>
-    <div class="cards">
+    <div class="wrapper">
         <HorizontalCardWithImageAndText v-for="item in items" :item="item" :key="item.header" />
     </div>
 </template>
@@ -43,8 +43,3 @@
     }
 </script>
 
-<style scoped>
-    .cards {
-        margin: 150px 30px;
-    }
-</style>

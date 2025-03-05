@@ -52,6 +52,13 @@
             }
         }
 
+        .wrapper {
+            padding: 150px 30px;
+            width: 100%;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
         @media (max-width: 400px) {
             @include big-text;
 

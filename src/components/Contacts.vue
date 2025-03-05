@@ -1,10 +1,12 @@
 <template>
-    <div class="contacts">
-        <h2>{{ title }}</h2>
-        <h3>{{ subtitle }}</h3>
-        <a class="telephoneNumber" :href="`tel:${telephoneNumber}`">{{ telephoneNumber }}</a>
-        <a :href="`mailto:${email}`">{{ email }}</a>
-        <div class="address">{{ address }}</div>
+    <div class="wrapper" :style="{ backgroundColor: theme === 'dark' ? '#eff6ff' : '' }">
+        <div class="contacts">
+            <h2>{{ title }}</h2>
+            <h3>{{ subtitle }}</h3>
+            <a class="telephoneNumber" :href="`tel:${telephoneNumber}`">{{ telephoneNumber }}</a>
+            <a :href="`mailto:${email}`">{{ email }}</a>
+            <div class="address">{{ address }}</div>
+        </div>
     </div>
 </template>
 
@@ -32,6 +34,10 @@
                 type: String,
                 default: '108811 г. Москва, п. Московский, 22-й километр Киевского шоссе, домовладение 6, стр. 1'
             },
+            theme: {
+                type: String,
+                default: 'light'
+            }
         }
     }
 </script>

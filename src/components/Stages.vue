@@ -1,26 +1,28 @@
 <template>
-    <div class="stages" :style="{ height: items.length * 350 + 'px' }">
-        <h2>{{title}}</h2>
-        <div class="items">
-            <div 
-            v-for="(item, index) in items" :key="index"
-            :style="{justifyContent: index %2 == 0? 'flex-end': 'flex-start'}"
-            class="row">
-                <div class="item">
-                    <div 
-                    :style="{
-                        left: index %2 == 0 ? '' : 'calc(100% + 50px)',
-                        right: index %2 == 0 ? 'calc(100% + 50px)' : ''
-                    }"
-                    class="circle">
-                        <div :style="{ marginLeft: index === 0 ? '-5px' : '0px' }" class="number">{{index + 1}}</div>
-                        <div v-if="index !== items.length - 1" class="line" />
-                    </div>
-                    <div 
-                    :style="{textAlign: index %2 == 0? 'start': 'end'}"
-                    class="content">
-                        <h3>{{item.title}}</h3>
-                        <p>{{item.description}}</p>
+    <div class="wrapper" :style="{ backgroundColor: theme === 'dark' ? '#eff6ff' : '' }">
+        <div class="stages" :style="{ height: items.length * 350 + 'px' }">
+            <h2>{{title}}</h2>
+            <div class="items">
+                <div 
+                v-for="(item, index) in items" :key="index"
+                :style="{justifyContent: index %2 == 0? 'flex-end': 'flex-start'}"
+                class="row">
+                    <div class="item">
+                        <div 
+                        :style="{
+                            left: index %2 == 0 ? '' : 'calc(100% + 50px)',
+                            right: index %2 == 0 ? 'calc(100% + 50px)' : ''
+                        }"
+                        class="circle">
+                            <div :style="{ marginLeft: index === 0 ? '-5px' : '0px' }" class="number">{{index + 1}}</div>
+                            <div v-if="index !== items.length - 1" class="line" />
+                        </div>
+                        <div 
+                        :style="{textAlign: index %2 == 0? 'start': 'end'}"
+                        class="content">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.description}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,7 +55,11 @@
                     },
 
                 ]
-            } 
+            },
+            theme: {
+                type: String,
+                default: 'light'
+            }
         }
     }
 </script>
