@@ -1,6 +1,7 @@
 {
   "name": "sputnik-ui",
   "version": "0.1.0",
+  "description": "Библиотека графических компонентов для сборки сайтов.",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

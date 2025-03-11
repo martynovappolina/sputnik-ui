@@ -8,7 +8,7 @@
     import HorizontalCardWithImageAndText from './HorizontalCardWithImageAndText.vue';
 
     export default {
-        name: 'CardsBlock',
+        name: 'HorizontalCardsBlock',
         components: {
             HorizontalCardWithImageAndText
         },
