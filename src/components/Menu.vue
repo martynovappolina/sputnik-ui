@@ -15,7 +15,7 @@
   <div v-if="windowWidth <= 800" class="menu">
     <div class="menu-row">
       <div class="logo" :style="{ backgroundImage: `url(${logoIconPath})` }" @click="onClickLogo" />
-      <div class="burger" @click="toggleMenu" :class="{ open: menuIsOpen }"></div>
+      <div class="burger" :style="{ backgroundImage: menuIsOpen? `url(${closeLogoPath})`:`url(${menuLogoPath})` }" @click="toggleMenu"></div>
     </div>
     
     <div v-if="menuIsOpen">
@@ -40,6 +40,9 @@
 
 <script>
   import defaultLogoIconPath from '../assets/icons/logo.svg';
+  import menuLogoPath from '../assets/icons/menu.svg';
+  import closeLogoPath from '../assets/icons/close.svg';
+  
   export default {
     name: 'MainMenu',  
     props: {  
@@ -71,6 +74,8 @@
     },
     data() {
       return {
+        menuLogoPath: menuLogoPath,
+        closeLogoPath: closeLogoPath,
         activeSubmenu: null,
         menuIsOpen: false,
         windowWidth: window.innerWidth
@@ -124,7 +129,6 @@
     .logo {
       width: 130px;
       height: 30px;
-      background-image: url('~@/assets/icons/logo.svg');
       background-repeat: no-repeat;
       background-position: center;
       cursor: pointer;
@@ -133,15 +137,10 @@
     .burger {
       width: 30px;
       height: 30px;
-      background-image: url('~@/assets/icons/menu.svg');
       background-repeat: no-repeat;
       background-position: center;
       cursor: pointer;
       transition: background-image 0.2s ease;
-
-      &.open {
-        background-image: url('~@/assets/icons/close.svg');
-      }
     }
 
     .items {
