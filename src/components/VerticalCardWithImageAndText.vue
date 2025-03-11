@@ -9,8 +9,11 @@
 </template>
 
 <script>
+    import CardWithImageAndText from './CardWithImageAndText.vue';
+
     export default {
         name: 'VerticalCardWithImageAndText',
+        extends: CardWithImageAndText,
         props: {
             imagePath: {
                 type: String,
