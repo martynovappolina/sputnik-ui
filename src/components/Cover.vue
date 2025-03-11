@@ -29,6 +29,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+    
     .cover {
         position: absolute;
         background-color: $primary-transparent;
