@@ -9,15 +9,14 @@
 </template>
 
 <script>
-    import CardWithImageAndText from './CardWithImageAndText.vue';
+    import mainProjectImage from '../assets/imgs/main-project.png';
 
     export default {
         name: 'VerticalCardWithImageAndText',
-        extends: CardWithImageAndText,
         props: {
             imagePath: {
                 type: String,
-                default: require('@/assets/imgs/main-project.png')
+                default: mainProjectImage
             },
             header: {
                 type: String,
