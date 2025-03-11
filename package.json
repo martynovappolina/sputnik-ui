@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Библиотека графических компонентов для сборки сайтов.",
   "private": true,
+  "main": "/dist/js/app.43c10887.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
