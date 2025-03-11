@@ -13,7 +13,7 @@
         props: {  
             backgroundImagePath: {
                 type: String,
-                default: require('@/assets/imgs/cover.png')
+                default: () => require('@/assets/imgs/cover.png')
             },
             header: {
                 type: String,
