@@ -8,12 +8,13 @@
 </template>
 
 <script>
+    import defaultCoverImage from '@/assets/imgs/cover.png';
     export default {
         name: 'CoverWithText',  
         props: {  
             backgroundImagePath: {
                 type: String,
-                default: () => require('@/assets/imgs/cover.png')
+                default: defaultCoverImage
             },
             header: {
                 type: String,
