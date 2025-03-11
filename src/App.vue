@@ -14,6 +14,7 @@
     <Stages theme="dark" />
     <GridWithCards />
     <Contacts />
+    <Test />
     <Footer />
   </Page>
 </template>
@@ -26,6 +27,7 @@
   import HorizontalCardsBlock from './components/HorizontalCardsBlock.vue';
   import NumberedList from './components/NumberedList.vue';
   import Contacts from './components/Contacts.vue';
+  import Test from './components/Test.vue';
   import Footer from './components/Footer.vue';
   import TextBlockWithHeader from './components/TextBlockWithHeader.vue';
   import MultiColumnListWithIcons from './components/MultiColumnListWithIcons.vue';
@@ -39,6 +41,7 @@
       Menu,
       Cover,
       Footer,
+      Test,
       VerticalCardWithImageAndText,
       HorizontalCardsBlock,
       Contacts,
