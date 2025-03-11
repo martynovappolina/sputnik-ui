@@ -17,6 +17,8 @@
 </template>
 
 <script>
+    import defaultStarIcon from '../assets/icons/star.svg';
+
     export default {
         name: 'MultiColumnListWithIcons',
         props: {
@@ -33,32 +35,32 @@
                 default() {
                     return [
                         {
-                            icon: require('@/assets/icons/star.svg'),
+                            icon: defaultStarIcon,
                             header: 'Преимущество 1',
                             description: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
-                            icon: require('@/assets/icons/star.svg'),
+                            icon: defaultStarIcon,
                             header: 'Преимущество 2',
                             description: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
-                            icon: require('@/assets/icons/star.svg'),
+                            icon: defaultStarIcon,
                             header: 'Преимущество 3',
                             description: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
-                            icon: require('@/assets/icons/star.svg'),
+                            icon: defaultStarIcon,
                             header: 'Преимущество 4',
                             description: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
-                            icon: require('@/assets/icons/star.svg'),
+                            icon: defaultStarIcon,
                             header: 'Преимущество 5',
                             description: 'Преимущество — это положительная черта, качество или характеристика'
                         },
                         {
-                            icon: require('@/assets/icons/star.svg'),
+                            icon: defaultStarIcon,
                             header: 'Преимущество 6',
                             description: 'Преимущество — это положительная черта, качество или характеристика'
                         },

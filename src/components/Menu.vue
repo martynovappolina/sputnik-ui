@@ -39,6 +39,7 @@
 </template>
 
 <script>
+  import defaultLogoIconPath from '../assets/icons/logo.svg';
   export default {
     name: 'MainMenu',  
     props: {  
@@ -61,7 +62,7 @@
       },
       logoIconPath: {
         type: String,
-        default: require('@/assets/icons/logo.svg')
+        default: defaultLogoIconPath
       },
       onClickLogo: {
         type: Function,

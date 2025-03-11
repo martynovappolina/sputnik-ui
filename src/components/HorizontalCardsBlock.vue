@@ -6,6 +6,9 @@
 
 <script>
     import HorizontalCardWithImageAndText from './HorizontalCardWithImageAndText.vue';
+    import defaultCoverImage1 from '../assets/imgs/project.png';
+    import defaultCoverImage2 from '../assets/imgs/project2.png';
+    import defaultCoverImage3 from '../assets/imgs/project3.png';
 
     export default {
         name: 'HorizontalCardsBlock',
@@ -17,21 +20,21 @@
                 type: Array,  
                 default: () => [
                     {
-                        imagePath: require('@/assets/imgs/project.png'),
+                        imagePath: defaultCoverImage1,
                         header: 'Проект',
                         text: 'Это наш проект. Это наш проект. Это наш проект. Это наш проект.',
                         imagePosition: 'right',
                         onClick: () => {}
                     },
                     {
-                        imagePath: require('@/assets/imgs/project2.png'),
+                        imagePath: defaultCoverImage2,
                         header: 'Проект 2',
                         text: 'Это наш проект. Это наш проект. Это наш проект. Это наш проект.',
                         imagePosition: 'left',
                         onClick: () => {}
                     },
                     {
-                        imagePath: require('@/assets/imgs/project3.png'),
+                        imagePath: defaultCoverImage3,
                         header: 'Проект 3',
                         text: 'Это наш проект. Это наш проект. Это наш проект. Это наш проект.',
                         imagePosition: 'right',

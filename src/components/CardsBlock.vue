@@ -6,6 +6,9 @@
 
 <script>
     import CardWithImageAndText from './CardWithImageAndText.vue';
+    import project1 from '../assets/imgs/project.png';
+    import project2 from '../assets/imgs/project2.png';
+    import project3 from '../assets/imgs/project3.png';
 
     export default {
         name: 'CardsBlock',
@@ -18,21 +21,21 @@
                 required: true,  
                 default: () => [
                     {
-                        imagePath: require('@/assets/imgs/project.png'),
+                        imagePath: project1,
                         header: 'Проект',
                         text: 'Это наш проект. Это наш проект. Это наш проект. Это наш проект.',
                         imagePosition: 'right',
                         onClick: () => {}
                     },
                     {
-                        imagePath: require('@/assets/imgs/project2.png'),
+                        imagePath: project2,
                         header: 'Проект 2',
                         text: 'Это наш проект. Это наш проект. Это наш проект. Это наш проект.',
                         imagePosition: 'left',
                         onClick: () => {}
                     },
                     {
-                        imagePath: require('@/assets/imgs/project3.png'),
+                        imagePath: project3,
                         header: 'Проект 3',
                         text: 'Это наш проект. Это наш проект. Это наш проект. Это наш проект.',
                         imagePosition: 'right',
@@ -46,7 +49,7 @@
 
 <style scoped>
     @import '../assets/styles/variables.scss';
-    
+
     .cards {
         margin: 150px 30px;
     }

@@ -15,6 +15,10 @@
 </template>
 
 <script>
+    import defaultImage1 from '../assets/imgs/project.png';
+    import defaultImage2 from '../assets/imgs/project2.png';
+    import defaultImage3 from '../assets/imgs/project3.png';
+
     export default {
         name: 'GridWithCards',
         props: {
@@ -26,56 +30,56 @@
                 type: Array,
                 default: () => [
                     {
-                        imagePath: require('@/assets/imgs/project2.png'),
+                        imagePath: defaultImage1,
                         title: 'Имя партнера',
                         description: 'Партнер — это человек или организация, с которой у вас есть взаимовыгодные отношения, основанные на сотрудничестве, доверии и общей цели. ',
                         link: 'http://test1.com',
                         linkName: 'Ссылка на партнера'
                     },
                     {
-                        imagePath: require('@/assets/imgs/project.png'),
+                        imagePath: defaultImage2,
                         title: 'Имя партнера',
                         description: 'Партнер — это человек или организация, с которой у вас есть взаимовыгодные отношения, основанные на сотрудничестве, доверии и общей цели. ',
                         link: 'http://test2.com',
                         linkName: 'Ссылка на партнера'
                     },
                     {
-                        imagePath: require('@/assets/imgs/project3.png'),
+                        imagePath: defaultImage3,
                         title: 'Имя партнера',
                         description: 'Партнер — это человек или организация, с которой у вас есть взаимовыгодные отношения, основанные на сотрудничестве, доверии и общей цели. ',
                         link: 'http://test3.com',
                         linkName: 'Ссылка на партнера'
                     },
                     {
-                        imagePath: require('@/assets/imgs/project3.png'),
+                        imagePath: defaultImage3,
                         title: 'Имя партнера',
                         description: 'Партнер — это человек или организация, с которой у вас есть взаимовыгодные отношения, основанные на сотрудничестве, доверии и общей цели. ',
                         link: 'http://test4.com',
                         linkName: 'Ссылка на партнера'
                     },
                     {
-                        imagePath: require('@/assets/imgs/project2.png'),
+                        imagePath: defaultImage2,
                         title: 'Имя партнера',
                         description: 'Партнер — это человек или организация, с которой у вас есть взаимовыгодные отношения, основанные на сотрудничестве, доверии и общей цели. ',
                         link: 'http://test5.com',
                         linkName: 'Ссылка на партнера'
                     },
                     {
-                        imagePath: require('@/assets/imgs/project.png'),
+                        imagePath: defaultImage1,
                         title: 'Имя партнера',
                         description: 'Партнер — это человек или организация, с которой у вас есть взаимовыгодные отношения, основанные на сотрудничестве, доверии и общей цели. ',
                         link: 'http://test6.com',
                         linkName: 'Ссылка на партнера'
                     },
                     {
-                        imagePath: require('@/assets/imgs/project2.png'),
+                        imagePath: defaultImage2,
                         title: 'Имя партнера',
                         description: 'Партнер — это человек или организация, с которой у вас есть взаимовыгодные отношения, основанные на сотрудничестве, доверии и общей цели. ',
                         link: 'http://test7.com',
                         linkName: 'Ссылка на партнера'
                     },
                     {
-                        imagePath: require('@/assets/imgs/project3.png'),
+                        imagePath: defaultImage3,
                         title: 'Имя партнера',
                         description: 'Партнер — это человек или организация, с которой у вас есть взаимовыгодные отношения, основанные на сотрудничестве, доверии и общей цели. ',
                         link: 'http://test8.com',
@@ -93,7 +97,7 @@
 
 <style lang="scss" scoped>
     @import '../assets/styles/variables.scss';
-    
+
     .grid-with-cards {
         margin: 150px auto;
         display: flex;

@@ -16,13 +16,15 @@
 </template>
 
 <script>
+    import defaultCoverImage from '../assets/imgs/project.png';
+    
     export default {
         name: 'HorizontalCardWithImageAndText',
         props: { 
             item: {
                 type: Object,
                 default: () => ({
-                    imagePath: require('@/assets/imgs/project.png'),
+                    imagePath: defaultCoverImage,
                     header: 'Проект',
                     text: 'Это наш проект. Это наш проект. Это наш проект. Это наш проект.',
                     imagePosition: 'right',
@@ -36,7 +38,7 @@
 
 <style lang="scss" scoped>
     @import '../assets/styles/variables.scss';
-    
+
     .card {
         display: flex;
         max-width: 1000px;
