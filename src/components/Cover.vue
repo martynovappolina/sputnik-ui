@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import defaultCoverImage from '@/assets/imgs/cover.png';
+    import defaultCoverImage from '../assets/imgs/cover.png';
     export default {
         name: 'CoverWithText',  
         props: {  
