@@ -45,6 +45,8 @@
 </script>
 
 <style scoped>
+    @import '../assets/styles/variables.scss';
+    
     .cards {
         margin: 150px 30px;
     }

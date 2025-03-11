@@ -17,6 +17,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+    
     button {
         @include text;
         border: none;

@@ -56,6 +56,8 @@
 </script>  
 
 <style lang='scss' scoped>  
+  @import '../assets/styles/variables.scss';
+
   .numbered-list {
     max-width: 1200px;
     display: flex;

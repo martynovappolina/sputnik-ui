@@ -92,6 +92,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+    
     .grid-with-cards {
         margin: 150px auto;
         display: flex;

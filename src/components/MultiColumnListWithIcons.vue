@@ -74,6 +74,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+
     .multi-column-list-with-icons {
         margin: 0 auto;
         max-width: 1200px;

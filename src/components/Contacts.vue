@@ -43,6 +43,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+
     .contacts {
         text-align: center;
         margin: 150px auto;

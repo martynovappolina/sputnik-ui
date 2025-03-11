@@ -65,6 +65,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+    
     .stages {
         padding: 30px;
         margin: 150px auto;

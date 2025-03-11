@@ -35,6 +35,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+    
     .card {
         display: flex;
         max-width: 1000px;

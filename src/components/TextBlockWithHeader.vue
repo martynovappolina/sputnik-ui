@@ -27,7 +27,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>  
+<style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+    
     .text-block-with-header {
         max-width: 1200px;
         min-height: 100vh;

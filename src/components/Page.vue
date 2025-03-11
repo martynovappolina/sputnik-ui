@@ -21,6 +21,8 @@
 </script>
 
 <style lang='scss'>
+    @import '../assets/styles/variables.scss';
+    
     .page-template-sputnik-ui-kit {
         @include text;
         color: $dark;

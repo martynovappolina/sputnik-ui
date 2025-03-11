@@ -33,6 +33,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/styles/variables.scss';
+    
     .card {
         display: flex;
         flex-direction: column;
