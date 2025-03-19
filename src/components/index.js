@@ -14,4 +14,5 @@ export { default as Page } from './Page';
 export { default as Stages } from './Stages';
 export { default as TextBlockWithHeader } from './TextBlockWithHeader';
 export { default as VerticalCardWithImageAndText } from './VerticalCardWithImageAndText';
+export { default as Divider } from './Divider';
 
