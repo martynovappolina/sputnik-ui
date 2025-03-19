@@ -43,7 +43,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
 
         h2 {
@@ -52,7 +52,7 @@
 
         .image {
             width: 100%;
-            max-width: 600px;
+            max-width: 1200px;
             height: 400px;
             margin: 50px 0;
             background-size: cover;
