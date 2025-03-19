@@ -7,16 +7,6 @@
 <script>
     export default {
         name: 'PageTemplate',
-        props: {
-            menu: {
-                type: Object,
-                required: true
-            },
-            footer: {
-                type: Object,
-                required: true
-            }
-        }
     }
 </script>
 
