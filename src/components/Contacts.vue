@@ -47,9 +47,11 @@
 
     .contacts {
         text-align: center;
-        margin: 150px auto;
-        padding: 30px;
+        margin: 0 auto;
         max-width: 450px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         
         h3 {
             margin: 0;
