@@ -42,45 +42,49 @@ export default {
   @import '../assets/styles/variables.scss';
 
   .footer {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 30px;
-      background-color: $primary;
-      color: $light;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    background-color: $primary;
+    color: $light;
 
-      .column {
-          margin: 0 10px;
-          text-align: center;
-          box-sizing: border-box;
+    .column {
+        margin: 0 10px;
+        text-align: center;
+        box-sizing: border-box;
 
-          h2 {
-              cursor: pointer;
-              margin-bottom: 5px;
-          }
+        h2 {
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
 
-          ul {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              margin-left: -40px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: -40px;
 
-              li {
-                  cursor: pointer;
-                  margin: 5px 0;
-                  width: fit-content;
-              }
-          }
+            li {
+                cursor: pointer;
+                margin: 5px 0;
+                width: fit-content;
+            }
+        }
 
-          @media (max-width: 1000px) {
-            flex: 0 0 calc(33.333% - 20px) !important; 
-          }
+        @media (max-width: 1000px) {
+          flex: 0 0 calc(33.333% - 20px) !important; 
+        }
 
-          @media (max-width: 800px) {
-            flex: 0 0 calc(50% - 20px) !important; 
-          }
-          @media (max-width: 500px) {
-            flex: 0 0 calc(100% - 20px) !important; 
-          }
-      }
+        @media (max-width: 800px) {
+          flex: 0 0 calc(50% - 20px) !important; 
+        }
+        @media (max-width: 500px) {
+          flex: 0 0 calc(100% - 20px) !important; 
+        }
+    }
   }
 </style>
