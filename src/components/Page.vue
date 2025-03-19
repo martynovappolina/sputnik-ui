@@ -45,7 +45,7 @@
         }
 
         .wrapper {
-            padding: 30px;
+            padding: 100px 30px;
             width: 100%;
             min-height: calc(100vh - 90px);
             box-sizing: border-box;
