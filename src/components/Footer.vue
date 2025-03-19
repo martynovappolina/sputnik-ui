@@ -1,6 +1,8 @@
 <template>
   <div class="footer">
-    <div class="column" v-for="item in items" :key="item.text">
+    <div 
+    :style="{ flex: `0 0 calc(${100/items.length}% - 20px)` }"
+    class="column" v-for="item in items" :key="item.text">
       <h3 @click="item.onClick ? item.onClick() : ()=>{}">{{ item.text }}</h3>
       <ul v-if="item.submenu">
         <li v-for="subitem in item.submenu" :key="subitem.text" @click="subitem.onClick">
@@ -47,7 +49,6 @@ export default {
       color: $light;
 
       .column {
-          flex: 0 0 calc(25% - 20px); 
           margin: 0 10px;
           text-align: center;
           box-sizing: border-box;
@@ -71,14 +72,14 @@ export default {
           }
 
           @media (max-width: 1000px) {
-              flex: 0 0 calc(33.333% - 20px); 
+            flex: 0 0 calc(33.333% - 20px) !important; 
           }
 
           @media (max-width: 800px) {
-              flex: 0 0 calc(50% - 20px); 
+            flex: 0 0 calc(50% - 20px) !important; 
           }
           @media (max-width: 500px) {
-              flex: 0 0 calc(100% - 20px); 
+            flex: 0 0 calc(100% - 20px) !important; 
           }
       }
   }
