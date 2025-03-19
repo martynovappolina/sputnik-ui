@@ -34,7 +34,7 @@
                 type: Array,
                 default() {
                     return [
-                        {
+                    {
                             icon: defaultStarIcon,
                             header: 'Преимущество 1',
                             text: 'Преимущество — это положительная черта, качество или характеристика.'
@@ -95,25 +95,31 @@
             flex-wrap: wrap;
             
             .item {
-                flex: 0 0 calc(33.333% - 60px);
+                flex: 0 0 calc(33.333% - 80px);
                 margin: 50px 30px;
 
+                p {
+                    text-align: center;
+                }
+
                 @media (max-width: 1200px) {
-                    flex: 0 0 calc(50% - 60px);
+                    flex: 0 0 calc(50% - 80px);
                 }
 
                 @media (max-width: 850px) {
-                    flex: 0 0 calc(100% - 60px);
+                    flex: 0 0 calc(100% - 80px);
                 }
             }
 
             .header-line {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 margin-bottom: 20px;
 
                 h3 {
                     color: $secondary;
+                    text-align: center;
                 }
 
                 .icon {
