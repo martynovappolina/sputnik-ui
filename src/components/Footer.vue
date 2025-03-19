@@ -53,22 +53,22 @@ export default {
         text-align: center;
         box-sizing: border-box;
 
-        h2 {
-            cursor: pointer;
-            margin-bottom: 5px;
+        h3 {
+          cursor: pointer;
+          margin-bottom: 5px;
         }
 
         ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: -40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: -40px;
 
-            li {
-                cursor: pointer;
-                margin: 5px 0;
-                width: fit-content;
-            }
+          li {
+              cursor: pointer;
+              margin: 5px 0;
+              width: fit-content;
+          }
         }
 
         @media (max-width: 1000px) {
