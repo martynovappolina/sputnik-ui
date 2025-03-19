@@ -2,14 +2,14 @@
     <div class="wrapper" :style="{ backgroundColor: theme === 'dark' ? '#eff6ff' : '' }">
         <div class="multi-column-list-with-icons">
             <h2>{{ header }}</h2>
-            <p class="description">{{ description }}</p>
+            <p class="description">{{ text }}</p>
             <div class="items">
                 <div v-for="item in items" :key="item.header" class="item">
                     <div class="header-line">
                         <div class="icon" :style="{ backgroundImage: `url(${item.icon})` }" />
                         <h3>{{ item.header }}</h3>
                     </div>
-                    <p>{{ item.description }}</p>
+                    <p>{{ item.text }}</p>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
                 type: String,
                 default: 'Преимущества'
             },
-            description: {
+            text: {
                 type: String,
                 default: 'Мы усердно работаем каждый день, чтобы сделать жизнь наших клиентов лучше и счастливее.'
             },
@@ -37,32 +37,32 @@
                         {
                             icon: defaultStarIcon,
                             header: 'Преимущество 1',
-                            description: 'Преимущество — это положительная черта, качество или характеристика.'
+                            text: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
                             icon: defaultStarIcon,
                             header: 'Преимущество 2',
-                            description: 'Преимущество — это положительная черта, качество или характеристика.'
+                            text: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
                             icon: defaultStarIcon,
                             header: 'Преимущество 3',
-                            description: 'Преимущество — это положительная черта, качество или характеристика.'
+                            text: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
                             icon: defaultStarIcon,
                             header: 'Преимущество 4',
-                            description: 'Преимущество — это положительная черта, качество или характеристика.'
+                            text: 'Преимущество — это положительная черта, качество или характеристика.'
                         },
                         {
                             icon: defaultStarIcon,
                             header: 'Преимущество 5',
-                            description: 'Преимущество — это положительная черта, качество или характеристика'
+                            text: 'Преимущество — это положительная черта, качество или характеристика'
                         },
                         {
                             icon: defaultStarIcon,
                             header: 'Преимущество 6',
-                            description: 'Преимущество — это положительная черта, качество или характеристика'
+                            text: 'Преимущество — это положительная черта, качество или характеристика'
                         },
                     ]
                 }
