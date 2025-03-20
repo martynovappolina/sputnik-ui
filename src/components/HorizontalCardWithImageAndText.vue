@@ -61,6 +61,10 @@
             justify-content: center;
             padding: 30px;
             box-sizing: border-box;
+
+            &:hover {
+                background-color: $primary-transparent;
+            }
         }
 
         .image {
