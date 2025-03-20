@@ -6,7 +6,7 @@
         <div class="item-text">{{ item.text }}</div>
         <div v-if="item.submenu && JSON.stringify(item) === JSON.stringify(items[activeSubmenu])" class="submenu" @click.stop>
           <div v-for="subitem in item.submenu" :key="subitem.text" @click="subitem.onClick" class="item">
-            <div class='item-text'>{{ subitem.text }}</div>
+            <div @click="activeSubmenu=null" class='item-text'>{{ subitem.text }}</div>
           </div>
         </div>
       </div>
