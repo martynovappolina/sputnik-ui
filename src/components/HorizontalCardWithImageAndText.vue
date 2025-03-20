@@ -64,6 +64,7 @@
 
             &:hover {
                 background-color: $primary-transparent;
+                transition: all .2s ease-in-out;
             }
         }
 
