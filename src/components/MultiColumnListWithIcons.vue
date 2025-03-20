@@ -125,7 +125,6 @@
                 .icon {
                     width: 50px;
                     height: 50px;
-                    margin-right: 20px;
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
