@@ -1,5 +1,5 @@
 <template>
-    <div class="cards">
+    <div class="wrapper">
         <CardWithImageAndText v-for="item in items" :item="item" :key="item.header" />
     </div>
 </template>
@@ -48,9 +48,4 @@
 </script>
 
 <style scoped>
-    @import '../assets/styles/variables.scss';
-
-    .cards {
-        margin: 150px 30px;
-    }
 </style>

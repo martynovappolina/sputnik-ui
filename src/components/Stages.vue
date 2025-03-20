@@ -69,7 +69,7 @@
     
     .stages {
         padding: 30px;
-        margin: 150px auto;
+        margin: 0 auto;
         width: calc(100% - 60px);
         max-width: 1160px;
 

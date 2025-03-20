@@ -99,7 +99,7 @@
     @import '../assets/styles/variables.scss';
 
     .grid-with-cards {
-        margin: 150px auto;
+        margin: 0px auto;
         display: flex;
         flex-direction: column;
         align-items: center;
