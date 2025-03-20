@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper" :style="{ backgroundColor: theme === 'dark' ? '#eff6ff' : '' }">
         <div class="text-block-with-header">
-            <h2>{{ header }}</h2>
+            <h2>{{ title }}</h2>
             <p v-html="text" />
         </div>
     </div>
@@ -11,7 +11,7 @@
 export default {
     name: 'TextBlockWithHeader',
     props: {
-        header: {
+        title: {
             type: String,
             default: 'Заголовок'
         },
