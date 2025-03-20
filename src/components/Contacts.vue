@@ -49,9 +49,10 @@
         text-align: center;
         margin: 0 auto;
         max-width: 450px;
+        min-height: calc(100vh - 290px);
         display: flex;
-        align-items: center;
         flex-direction: column;
+        justify-content: center;
         
         h3 {
             margin: 0;
