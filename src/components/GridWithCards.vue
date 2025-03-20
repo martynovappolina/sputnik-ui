@@ -125,7 +125,7 @@
                 .image {
                     width: 100%;
                     height: 300px;
-                    background-size: cover;
+                    background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;
                 }
