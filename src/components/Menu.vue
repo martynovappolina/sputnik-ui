@@ -3,7 +3,7 @@
     <div class="logo" :style="{ backgroundImage: `url(${logoIconPath})` }" @click="onClickLogo" />
     <div class="items">
       <div v-for="(item, index) in items" :key="item.text" class="item" @click.stop="onItemClick(index)">
-        <div class="item-text">{{ item.text }}</div>
+        <div @click="activeSubmenu=null" class="item-text">{{ item.text }}</div>
         <div v-if="item.submenu && JSON.stringify(item) === JSON.stringify(items[activeSubmenu])" class="submenu" @click.stop>
           <div v-for="subitem in item.submenu" :key="subitem.text" @click="subitem.onClick" class="item">
             <div @click="activeSubmenu=null" class='item-text'>{{ subitem.text }}</div>
