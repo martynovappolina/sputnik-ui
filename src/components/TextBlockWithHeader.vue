@@ -32,7 +32,7 @@ export default {
     
     .text-block-with-header {
         max-width: 1200px;
-        min-height: 100vh;
+        min-height: calc(100vh - 290px);
         display: flex;
         flex-direction: column;
         justify-content: center;
