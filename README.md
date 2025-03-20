@@ -4,7 +4,7 @@
 Входные данные всех компонентов заполнены по умолчанию.
 
 ## Установка библиотеки
-npm install --save git+http://gitlab-s1.ix.km/sputnik/sputnik-ui.git
+npm install --save git+http://gitlab-s1.ix.km/sputnik/sputnik-ui.git#0.1.0
 
 ### Компоненты
 ### Page - Страница
