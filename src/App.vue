@@ -2,6 +2,7 @@
   <Page>
     <Menu />
     <Cover />
+    <HorizontalBlocksWithPictureTitleAndText />
     <HorizontalCardsBlock />
     <VerticalCardWithImageAndText theme="dark" />
     <NumberedList />
@@ -27,6 +28,7 @@
     TextBlockWithHeader,
     MultiColumnListWithIcons,
     Stages,
+    HorizontalBlocksWithPictureTitleAndText,
     GridWithCards
   } from './index';
 
@@ -39,6 +41,7 @@
       Footer,
       VerticalCardWithImageAndText,
       HorizontalCardsBlock,
+      HorizontalBlocksWithPictureTitleAndText,
       Contacts,
       NumberedList,
       TextBlockWithHeader,
