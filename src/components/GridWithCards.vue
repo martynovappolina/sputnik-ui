@@ -119,8 +119,8 @@
             justify-content: center;
 
             .item {
-                flex: 0 0 calc(25% - 20px);
-                margin: 50px 10px;
+                flex: 0 0 calc(25% - 60px);
+                margin: 50px 30px;
 
                 .image {
                     width: 100%;
@@ -131,11 +131,11 @@
                 }
 
                 @media (max-width: 1300px) {
-                    flex: 0 0 calc(33.333% - 20px);
+                    flex: 0 0 calc(33.333% - 60px);
                 }
 
                 @media (max-width: 1150px) {
-                    flex: 0 0 calc(50% - 20px);
+                    flex: 0 0 calc(50% - 60px);
                 }
 
                 @media (max-width: 700px) {
