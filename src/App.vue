@@ -2,7 +2,7 @@
   <Page>
     <Menu />
     <Cover />
-    <HorizontalBlocksWithPictureTitleAndText />
+    <List />
     <HorizontalCardsBlock />
     <VerticalCardWithImageAndText theme="dark" />
     <NumberedList />
@@ -20,6 +20,7 @@
     Page,
     Menu,
     Cover,
+    List,
     VerticalCardWithImageAndText,
     HorizontalCardsBlock,
     NumberedList,
@@ -28,7 +29,6 @@
     TextBlockWithHeader,
     MultiColumnListWithIcons,
     Stages,
-    HorizontalBlocksWithPictureTitleAndText,
     GridWithCards
   } from './index';
 
@@ -38,10 +38,10 @@
       Page,
       Menu,
       Cover,
+      List,
       Footer,
       VerticalCardWithImageAndText,
       HorizontalCardsBlock,
-      HorizontalBlocksWithPictureTitleAndText,
       Contacts,
       NumberedList,
       TextBlockWithHeader,

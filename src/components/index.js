@@ -16,4 +16,5 @@ export { default as TextBlockWithHeader } from './TextBlockWithHeader';
 export { default as VerticalCardWithImageAndText } from './VerticalCardWithImageAndText';
 export { default as HorizontalBlocksWithPictureTitleAndText } from './HorizontalBlocksWithPictureTitleAndText';
 export { default as Divider } from './Divider';
+export { default as List } from './List';
 
