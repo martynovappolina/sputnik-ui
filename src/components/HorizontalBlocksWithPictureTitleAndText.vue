@@ -97,7 +97,7 @@
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
-        margin-bottom: 50px;
+        margin-bottom: 150px;
         
         .image {
             background-size: contain;
