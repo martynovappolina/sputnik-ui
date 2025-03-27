@@ -27,7 +27,7 @@
       <div v-for="(item, index) in items" :key="item.text">
         <div v-if="item.submenu && index === activeSubmenu" class="submenu">
           <div v-for="subitem in item.submenu" :key="subitem.text" class="item" @click="subitem.onClick">
-            <div class='item-text'>{{ subitem.text }}</div>
+            <div @click="activeSubmenu=null; menuIsOpen=false" class='item-text'>{{ subitem.text }}</div>
           </div>
           <div class="item-text" @click="activeSubmenu=null">Вернуться к основному меню</div>
         </div>
