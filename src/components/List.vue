@@ -3,7 +3,7 @@
         <div class="list">
             <h2>{{ title }}</h2>
             <ul>
-                <li v-for="item in items" :key="item.text" :class="{ link: item.onClick }">
+                <li v-for="item in items" @click="item.onClick ? item.onClick() : ()=>{}" :key="item.text" :class="{ link: item.onClick }">
                     {{ item.text }}
                 </li>
             </ul>
