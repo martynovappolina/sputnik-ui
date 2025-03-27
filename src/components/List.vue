@@ -59,8 +59,8 @@
             &::before {
                 content: '';
                 display: block;
-                width: 10px;
-                height: 10px;
+                min-width: 10px;
+                min-height: 10px;
                 border-radius: 50%;
                 background-color: $primary;
                 margin-right: 10px;
