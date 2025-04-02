@@ -50,7 +50,7 @@ export default {
 
     .column {
         margin: 0 10px;
-        text-align: center;
+        padding: 0 30px;
         box-sizing: border-box;
 
         h3 {
@@ -61,13 +61,12 @@ export default {
         ul {
           display: flex;
           flex-direction: column;
-          align-items: center;
           margin-left: -40px;
 
           li {
-              cursor: pointer;
-              margin: 5px 0;
-              width: fit-content;
+            cursor: pointer;
+            margin: 5px 0;
+            width: fit-content;
           }
         }
 
