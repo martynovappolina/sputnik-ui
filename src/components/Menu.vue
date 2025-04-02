@@ -85,6 +85,18 @@
       document.addEventListener('click', this.hideSubmenuWhenClickingOnDocument)
       window.addEventListener('resize', this.updateWindowWidth);
     },
+    watch: {
+      activeSubmenu() {
+        setTimeout(() => {
+          const submenu = document.getElementsByClassName('submenu')[0];
+          if (submenu) {
+            const submenuWidth = submenu.offsetWidth;
+            submenu.style.left = `calc(-${submenuWidth / 2}px + 50%)`;  
+            submenu.style.visibility = 'visible';
+          }
+        }, 1)
+      }
+    },
     unmounted() {
       document.removeEventListener('click', this.hideSubmenuWhenClickingOnDocument);
       window.removeEventListener('resize', this.updateWindowWidth);
@@ -165,6 +177,8 @@
       position: absolute;
       top: 70px;
       left: -50%;
+      visibility: hidden;
+      white-space: nowrap;
       background-color: $menu-background;
       padding: 20px 30px;
       border-radius: 5px;
