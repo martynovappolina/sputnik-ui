@@ -1,9 +1,9 @@
 # sputnik-ui
 ## Описание 
 Библиотека sputnik-ui - это набор готовых к использованию компонентов, собранных в одном месте, для упрощения и ускорения процесса создания лендингов, сайтов-визиток и других веб-страниц.  
-Входные данные всех компонентов заполнены по умолчанию.
-Библиотека используется в шаблонном проекте http://gitlab-s1.ix.km/sputnik/sputnik-site-template.
-Ссылка на UI Kit: https://www.figma.com/design/9aCudhwNvyq87kxO2dqsQH/sputnik-ui-kit?node-id=0-1&m=dev&t=x1aXklcdzFI1euJz-1
+Входные данные всех компонентов заполнены по умолчанию.  
+Библиотека используется в шаблонном проекте http://gitlab-s1.ix.km/sputnik/sputnik-site-template.  
+Ссылка на UI Kit: https://www.figma.com/design/9aCudhwNvyq87kxO2dqsQH/sputnik-ui-kit?node-id=0-1&m=dev&t=x1aXklcdzFI1euJz-1  
 
 ## Установка библиотеки
 npm install --save git+http://gitlab-s1.ix.km/sputnik/sputnik-ui.git#0.1.0
