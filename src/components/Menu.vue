@@ -29,7 +29,7 @@
           <div v-for="subitem in item.submenu" :key="subitem.text" class="item" @click="subitem.onClick">
             <div @click="activeSubmenu=null; menuIsOpen=false" class='item-text'>{{ subitem.text }}</div>
           </div>
-          <div class="item-text" @click="activeSubmenu=null">Вернуться к основному меню</div>
+          <div class="item-text return" @click="activeSubmenu=null">Вернуться к основному меню</div>
         </div>
       </div>
     </div>
@@ -166,6 +166,10 @@
       &-text {
         cursor: pointer;
         color: $dark;
+
+        &.return {
+          color: $secondary2;
+        }
 
         &:hover {
           color: $secondary;
