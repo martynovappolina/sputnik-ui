@@ -20,5 +20,6 @@ npm install --save git+http://gitlab-s1.ix.km/sputnik/sputnik-ui.git#0.1.0
 * [NumberedList - Нумерованный список в одну колонку](docs/NumberedList.md)
 * [MultiColumnListWithIcons - Список в несколько колонок с иконками](docs/MultiColumnListWithIcons.md)
 * [GridWithCards - Сетка с карточками](docs/GridWithCards.md)
+* [List - Список с заголовком](docs/List.md)
 * [Contacts - Контакты](docs/Contacts.md)
 * [Footer - Подвал с расширенным меню](docs/Footer.md)
