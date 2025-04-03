@@ -6,7 +6,7 @@
 Ссылка на UI Kit: https://www.figma.com/design/9aCudhwNvyq87kxO2dqsQH/sputnik-ui-kit?node-id=0-1&m=dev&t=x1aXklcdzFI1euJz-1  
 
 ## Установка библиотеки
-npm install --save git+http://gitlab-s1.ix.km/sputnik/sputnik-ui.git#0.1.0
+npm install --save git+http://gitlab-s1.ix.km/sputnik/sputnik-ui.git
 
 ### Компоненты
 * [Page - Страница](docs/Page.md)
