@@ -28,7 +28,7 @@
             },
             email: {
                 type: String,
-                default: 'info@corp.sputnik.ru'
+                default: 'info@sputnik.ru'
             },
             address: {
                 type: String,
